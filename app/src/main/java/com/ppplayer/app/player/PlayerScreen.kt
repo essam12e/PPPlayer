@@ -31,6 +31,8 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.WindowInsetsSides
+import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.displayCutout
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -258,7 +260,11 @@ fun PlayerScreen(
             delay(250)
         }
     }
-    LaunchedEffect(state.isPlaying) { host.keepScreenOn(state.isPlaying) }
+    LaunchedEffect(state.isPlaying) {
+        host.keepScreenOn(state.isPlaying)
+        // A pause (from the notification, a headset or a double tap) brings the controls back.
+        if (!state.isPlaying && state.playbackState == Player.STATE_READY && !locked) controlsVisible = true
+    }
     LaunchedEffect(state.mediaId, state.videoSize.width > 0, state.isAudioItem) {
         host.applyOrientation(state.videoSize.width, state.videoSize.height, state.isAudioItem)
         zoom = 1f
@@ -942,7 +948,7 @@ private fun PlayerControls(
                 Modifier
                     .align(Alignment.BottomCenter)
                     .fillMaxWidth()
-                    .windowInsetsPadding(WindowInsets.displayCutout)
+                    .windowInsetsPadding(WindowInsets.displayCutout.only(WindowInsetsSides.Horizontal))
                     .padding(horizontal = 16.dp)
                     .padding(bottom = 10.dp),
             ) {

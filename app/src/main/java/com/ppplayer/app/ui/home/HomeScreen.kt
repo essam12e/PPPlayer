@@ -64,6 +64,7 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -71,6 +72,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -177,6 +179,7 @@ fun HomeScreen(library: LibraryViewModel, prefs: Prefs, actions: MediaActions) {
                 )
             )
     ) {
+        CompositionLocalProvider(LocalContentColor provides MaterialTheme.colorScheme.onBackground) {
         Column(
             Modifier
                 .fillMaxSize()
@@ -232,6 +235,7 @@ fun HomeScreen(library: LibraryViewModel, prefs: Prefs, actions: MediaActions) {
                 openFolder = null
                 tab = it
             }
+        }
         }
     }
 

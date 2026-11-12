@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.provider.MediaStore
+import android.util.Log
 import androidx.core.content.ContextCompat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -81,7 +82,7 @@ class MediaRepository(private val context: Context) {
                     )
                 }
             }
-        }
+        }.onFailure { Log.w("PPPlayer", "Media query failed (audio=$audio)", it) }
         return result
     }
 
