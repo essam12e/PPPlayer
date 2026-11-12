@@ -2,5 +2,4 @@
 <resources>
     <color name="launcher_background">#E9EEFF</color>
     <color name="window_dark">#0A0C16</color>
-    <color name="window_light">#F3F5FF</color>
 </resources>

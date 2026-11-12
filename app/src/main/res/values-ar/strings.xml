@@ -18,7 +18,6 @@
     <string name="sort_descending">تنازلي</string>
     <string name="view_grid">عرض شبكي</string>
     <string name="view_list">عرض قائمة</string>
-    <string name="refresh">تحديث</string>
     <string name="network_stream">بث من رابط</string>
     <string name="network_stream_hint">الصق رابط الفيديو (http أو https أو rtsp)</string>
     <string name="network_stream_invalid">أدخل رابطًا صحيحًا</string>
@@ -54,7 +53,6 @@
     <string name="permission_title">اسمح لـ PPPlayer بالوصول إلى ملفاتك</string>
     <string name="permission_body">يحتاج PPPlayer إلى الوصول للفيديو والموسيقى على هذا الجهاز لبناء مكتبتك. لا يخرج شيء من هاتفك.</string>
     <string name="permission_grant">السماح بالوصول</string>
-    <string name="permission_settings">فتح إعدادات التطبيق</string>
     <string name="empty_videos_title">لا توجد فيديوهات بعد</string>
     <string name="empty_videos_body">الفيديوهات التي تحفظها أو تنزّلها على الجهاز ستظهر هنا.</string>
     <string name="empty_music_title">لا توجد موسيقى بعد</string>
@@ -105,7 +103,6 @@
     <string name="aspect_4_3">4:3</string>
     <string name="player_lock">قفل الشاشة</string>
     <string name="player_unlock">فتح القفل</string>
-    <string name="player_locked">الشاشة مقفلة</string>
     <string name="player_rotate">تدوير</string>
     <string name="player_pip">صورة داخل صورة</string>
     <string name="player_next">التالي</string>
@@ -142,7 +139,6 @@
     <string name="player_retry">إعادة المحاولة</string>
     <string name="player_speed_boost">سرعة 2×</string>
     <string name="player_zoom">تكبير %1$d%%</string>
-    <string name="player_nothing_to_play">لا يوجد ما يُشغَّل</string>
     <string name="now_playing">يُشغَّل الآن</string>
 
     <string name="settings_appearance">المظهر</string>

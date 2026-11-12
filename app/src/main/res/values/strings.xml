@@ -22,7 +22,6 @@
     <string name="sort_descending">Descending</string>
     <string name="view_grid">Grid view</string>
     <string name="view_list">List view</string>
-    <string name="refresh">Refresh</string>
     <string name="network_stream">Network stream</string>
     <string name="network_stream_hint">Paste a video link (http, https, rtsp)</string>
     <string name="network_stream_invalid">Enter a valid link</string>
@@ -51,7 +50,6 @@
     <string name="permission_title">Let PPPlayer find your media</string>
     <string name="permission_body">PPPlayer needs access to the videos and music on this device to build your library. Nothing leaves your phone.</string>
     <string name="permission_grant">Allow access</string>
-    <string name="permission_settings">Open app settings</string>
     <string name="empty_videos_title">No videos yet</string>
     <string name="empty_videos_body">Videos you save or download on this device will show up here.</string>
     <string name="empty_music_title">No music yet</string>
@@ -104,7 +102,6 @@
     <string name="aspect_4_3">4:3</string>
     <string name="player_lock">Lock screen</string>
     <string name="player_unlock">Unlock</string>
-    <string name="player_locked">Screen locked</string>
     <string name="player_rotate">Rotate</string>
     <string name="player_pip">Picture in picture</string>
     <string name="player_next">Next</string>
@@ -141,7 +138,6 @@
     <string name="player_retry">Try again</string>
     <string name="player_speed_boost">2× speed</string>
     <string name="player_zoom">Zoom %1$d%%</string>
-    <string name="player_nothing_to_play">Nothing to play</string>
     <string name="now_playing">Now playing</string>
 
     <!-- Settings -->
