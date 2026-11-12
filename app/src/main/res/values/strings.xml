@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">PPPlayer</string>
+
+    <!-- Tabs -->
+    <string name="tab_videos">Videos</string>
+    <string name="tab_music">Music</string>
+    <string name="tab_recent">Recent</string>
+    <string name="tab_settings">Settings</string>
+
+    <!-- Library -->
+    <string name="folders">Folders</string>
+    <string name="all_videos">All videos</string>
+    <string name="search_hint">Search videos and music</string>
+    <string name="search">Search</string>
+    <string name="sort">Sort</string>
+    <string name="sort_name">Name</string>
+    <string name="sort_date">Date added</string>
+    <string name="sort_size">Size</string>
+    <string name="sort_duration">Duration</string>
+    <string name="sort_ascending">Ascending</string>
+    <string name="sort_descending">Descending</string>
+    <string name="view_grid">Grid view</string>
+    <string name="view_list">List view</string>
+    <string name="refresh">Refresh</string>
+    <string name="network_stream">Network stream</string>
+    <string name="network_stream_hint">Paste a video link (http, https, rtsp)</string>
+    <string name="network_stream_invalid">Enter a valid link</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="close">Close</string>
+    <string name="back">Back</string>
+    <string name="more">More</string>
+    <string name="continue_watching">Continue watching</string>
+    <string name="resume_from">Resume from %1$s</string>
+    <string name="time_left">%1$s left</string>
+    <plurals name="video_count">
+        <item quantity="one">%d video</item>
+        <item quantity="other">%d videos</item>
+    </plurals>
+    <plurals name="track_count">
+        <item quantity="one">%d track</item>
+        <item quantity="other">%d tracks</item>
+    </plurals>
+    <string name="unknown_artist">Unknown artist</string>
+    <string name="new_badge">NEW</string>
+
+    <!-- Empty / permission states -->
+    <string name="permission_title">Let PPPlayer find your media</string>
+    <string name="permission_body">PPPlayer needs access to the videos and music on this device to build your library. Nothing leaves your phone.</string>
+    <string name="permission_grant">Allow access</string>
+    <string name="permission_settings">Open app settings</string>
+    <string name="empty_videos_title">No videos yet</string>
+    <string name="empty_videos_body">Videos you save or download on this device will show up here.</string>
+    <string name="empty_music_title">No music yet</string>
+    <string name="empty_music_body">Audio files on this device will show up here.</string>
+    <string name="empty_recent_title">Nothing played yet</string>
+    <string name="empty_recent_body">Everything you watch or listen to is kept here so you can pick it up again.</string>
+    <string name="empty_search_title">No matches</string>
+    <string name="empty_search_body">Try a different name.</string>
+    <string name="clear_history">Clear history</string>
+    <string name="clear_history_confirm">Remove everything from Recent? Saved positions are cleared too.</string>
+
+    <!-- Item actions -->
+    <string name="action_play">Play</string>
+    <string name="action_share">Share</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_info">Details</string>
+    <string name="delete_confirm">Delete “%1$s” from this device? This can’t be undone.</string>
+    <string name="rename_title">Rename</string>
+    <string name="deleted">Deleted</string>
+    <string name="renamed">Renamed</string>
+    <string name="operation_failed">Couldn’t complete that. Try again.</string>
+    <string name="info_name">Name</string>
+    <string name="info_location">Location</string>
+    <string name="info_size">Size</string>
+    <string name="info_duration">Duration</string>
+    <string name="info_resolution">Resolution</string>
+    <string name="info_date">Added</string>
+    <string name="info_video_codec">Video</string>
+    <string name="info_audio_codec">Audio</string>
+    <string name="info_frame_rate">Frame rate</string>
+    <string name="info_bitrate">Bitrate</string>
+
+    <!-- Player -->
+    <string name="player_audio_track">Audio track</string>
+    <string name="player_subtitles">Subtitles</string>
+    <string name="player_subtitles_off">Off</string>
+    <string name="player_subtitles_open">Open subtitle file…</string>
+    <string name="player_subtitle_loaded">Subtitle loaded</string>
+    <string name="player_subtitle_size">Subtitle size</string>
+    <string name="player_no_tracks">No tracks available</string>
+    <string name="player_track_n">Track %1$d</string>
+    <string name="player_speed">Playback speed</string>
+    <string name="player_speed_normal">Normal</string>
+    <string name="player_aspect">Display size</string>
+    <string name="aspect_fit">Fit to screen</string>
+    <string name="aspect_crop">Crop</string>
+    <string name="aspect_stretch">Stretch</string>
+    <string name="aspect_16_9">16:9</string>
+    <string name="aspect_4_3">4:3</string>
+    <string name="player_lock">Lock screen</string>
+    <string name="player_unlock">Unlock</string>
+    <string name="player_locked">Screen locked</string>
+    <string name="player_rotate">Rotate</string>
+    <string name="player_pip">Picture in picture</string>
+    <string name="player_next">Next</string>
+    <string name="player_previous">Previous</string>
+    <string name="player_rewind">Rewind</string>
+    <string name="player_forward">Forward</string>
+    <string name="player_sleep_timer">Sleep timer</string>
+    <string name="sleep_off">Off</string>
+    <string name="sleep_minutes">%1$d minutes</string>
+    <string name="sleep_end_of_video">End of this video</string>
+    <string name="sleep_set">Playback stops in %1$d minutes</string>
+    <string name="sleep_set_end">Playback stops when this video ends</string>
+    <string name="sleep_cleared">Sleep timer off</string>
+    <string name="player_repeat">Repeat</string>
+    <string name="repeat_off">Off</string>
+    <string name="repeat_one">This video</string>
+    <string name="repeat_all">Whole list</string>
+    <string name="player_shuffle">Shuffle</string>
+    <string name="player_ab_repeat">A–B repeat</string>
+    <string name="ab_set_a">Point A set. Tap again at point B.</string>
+    <string name="ab_set_b">Repeating A–B</string>
+    <string name="ab_cleared">A–B repeat off</string>
+    <string name="player_decoder">Decoder</string>
+    <string name="decoder_hw">HW — hardware</string>
+    <string name="decoder_hw_plus">HW+ — hardware, software fallback</string>
+    <string name="decoder_sw">SW — software audio first</string>
+    <string name="player_background_play">Play in background</string>
+    <string name="player_info">Details</string>
+    <string name="player_queue">Playlist</string>
+    <string name="player_brightness">Brightness</string>
+    <string name="player_volume">Volume</string>
+    <string name="player_error">This file can’t be played</string>
+    <string name="player_error_body">The format may be unsupported or the file is damaged. Try another decoder from the menu.</string>
+    <string name="player_retry">Try again</string>
+    <string name="player_speed_boost">2× speed</string>
+    <string name="player_zoom">Zoom %1$d%%</string>
+    <string name="player_nothing_to_play">Nothing to play</string>
+    <string name="now_playing">Now playing</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_theme">Theme</string>
+    <string name="theme_system">Follow system</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="settings_playback">Playback</string>
+    <string name="settings_resume">Resume where you left off</string>
+    <string name="settings_resume_desc">Videos start from your last position</string>
+    <string name="settings_autoplay">Play next automatically</string>
+    <string name="settings_autoplay_desc">Continue with the next video in the folder</string>
+    <string name="settings_background">Play in background</string>
+    <string name="settings_background_desc">Keep the sound going when you leave the player</string>
+    <string name="settings_orientation">Screen orientation</string>
+    <string name="orientation_video">Match the video</string>
+    <string name="orientation_landscape">Always landscape</string>
+    <string name="orientation_sensor">Follow device rotation</string>
+    <string name="settings_seek_step">Double-tap seek</string>
+    <string name="seconds_value">%1$d seconds</string>
+    <string name="settings_decoder">Default decoder</string>
+    <string name="settings_gestures">Gestures</string>
+    <string name="settings_gesture_brightness">Swipe for brightness</string>
+    <string name="settings_gesture_brightness_desc">Slide up or down on the left side</string>
+    <string name="settings_gesture_volume">Swipe for volume</string>
+    <string name="settings_gesture_volume_desc">Slide up or down on the right side</string>
+    <string name="settings_gesture_seek">Swipe to seek</string>
+    <string name="settings_gesture_seek_desc">Slide sideways to move through the video</string>
+    <string name="settings_gesture_double_tap">Double-tap to seek</string>
+    <string name="settings_gesture_double_tap_desc">Tap twice on either edge to jump</string>
+    <string name="settings_gesture_zoom">Pinch to zoom</string>
+    <string name="settings_gesture_zoom_desc">Use two fingers to zoom the picture</string>
+    <string name="settings_gesture_speed">Hold for 2× speed</string>
+    <string name="settings_gesture_speed_desc">Press and hold to fast-forward</string>
+    <string name="settings_subtitles">Subtitles</string>
+    <string name="settings_about">About</string>
+    <string name="settings_version">Version %1$s</string>
+</resources>
