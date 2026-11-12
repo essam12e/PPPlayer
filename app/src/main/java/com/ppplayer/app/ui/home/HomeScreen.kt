@@ -120,6 +120,7 @@ import com.ppplayer.app.player.QueueItem
 import com.ppplayer.app.ui.theme.Brand
 import com.ppplayer.app.ui.theme.TABULAR
 import com.ppplayer.app.util.formatDuration
+import com.ppplayer.app.util.ltr
 import com.ppplayer.app.util.normalizeStreamUrl
 
 private enum class Tab(val label: Int, val icon: ImageVector) {
@@ -723,8 +724,10 @@ private fun RecentRow(entry: HistoryEntry, file: MediaFile?, onClick: () -> Unit
             Text(entry.title, style = MaterialTheme.typography.titleMedium, maxLines = 2, overflow = TextOverflow.Ellipsis)
             Spacer(Modifier.height(3.dp))
             Text(
-                if (entry.durationMs > 0) formatDuration(entry.positionMs) + " / " + formatDuration(entry.durationMs)
-                else formatDuration(entry.positionMs),
+                ltr(
+                    if (entry.durationMs > 0) formatDuration(entry.positionMs) + " / " + formatDuration(entry.durationMs)
+                    else formatDuration(entry.positionMs)
+                ),
                 style = MaterialTheme.typography.bodySmall.copy(fontFeatureSettings = TABULAR),
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

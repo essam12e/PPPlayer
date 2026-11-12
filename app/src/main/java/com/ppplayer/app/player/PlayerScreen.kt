@@ -83,6 +83,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.BiasAlignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.clipToBounds
@@ -689,7 +690,7 @@ private fun SubtitleLayer(cues: List<Cue>, scale: Float) {
 
 @Composable
 private fun AudioArtwork(title: String) {
-    Box(
+    BoxWithConstraints(
         Modifier
             .fillMaxSize()
             .background(
@@ -698,17 +699,25 @@ private fun AudioArtwork(title: String) {
                     radius = 900f,
                 )
             ),
-        contentAlignment = Alignment.Center,
     ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(32.dp)) {
-            Image(
-                painterResource(R.drawable.brand_logo),
-                contentDescription = null,
-                modifier = Modifier
-                    .size(132.dp)
-                    .clip(RoundedCornerShape(34.dp)),
-            )
-            Spacer(Modifier.height(20.dp))
+        // Sits above the transport buttons; short (landscape) screens drop the logo to make room.
+        val roomy = maxHeight >= 520.dp
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier
+                .align(BiasAlignment(0f, if (roomy) -0.62f else -0.5f))
+                .padding(horizontal = 32.dp),
+        ) {
+            if (roomy) {
+                Image(
+                    painterResource(R.drawable.brand_logo),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(132.dp)
+                        .clip(RoundedCornerShape(34.dp)),
+                )
+                Spacer(Modifier.height(20.dp))
+            }
             Text(
                 stringResource(R.string.now_playing),
                 style = MaterialTheme.typography.labelMedium,
@@ -720,7 +729,7 @@ private fun AudioArtwork(title: String) {
                 style = MaterialTheme.typography.titleLarge,
                 color = Color.White,
                 textAlign = TextAlign.Center,
-                maxLines = 2,
+                maxLines = if (roomy) 2 else 1,
                 overflow = TextOverflow.Ellipsis,
             )
         }

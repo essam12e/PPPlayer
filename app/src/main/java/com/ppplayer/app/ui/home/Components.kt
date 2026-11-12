@@ -74,6 +74,7 @@ import com.ppplayer.app.ui.theme.Brand
 import com.ppplayer.app.ui.theme.TABULAR
 import com.ppplayer.app.util.formatDuration
 import com.ppplayer.app.util.formatSize
+import com.ppplayer.app.util.ltr
 import java.text.DateFormat
 import java.util.Date
 
@@ -181,7 +182,7 @@ fun VideoListRow(
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 if (isNew) NewBadge()
                 Text(
-                    listOfNotNull(file.resolutionLabel, formatSize(file.sizeBytes)).joinToString(" · "),
+                    listOfNotNull(file.resolutionLabel, ltr(formatSize(file.sizeBytes))).joinToString(" · "),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,
@@ -235,7 +236,7 @@ fun VideoGridCard(
             ) {
                 Text(file.title, style = MaterialTheme.typography.titleSmall, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 Text(
-                    listOfNotNull(file.resolutionLabel, formatSize(file.sizeBytes)).joinToString(" · "),
+                    listOfNotNull(file.resolutionLabel, ltr(formatSize(file.sizeBytes))).joinToString(" · "),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,
@@ -299,7 +300,7 @@ fun FolderRow(folder: MediaFolder, onClick: () -> Unit, modifier: Modifier = Mod
             Spacer(Modifier.height(3.dp))
             Text(
                 pluralStringResource(R.plurals.video_count, folder.files.size, folder.files.size) +
-                    " · " + formatSize(folder.totalSize),
+                    " · " + ltr(formatSize(folder.totalSize)),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -420,9 +421,9 @@ private fun DetailsDialog(file: MediaFile, onDismiss: () -> Unit) {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 DetailLine(R.string.info_name, file.name)
                 if (file.path.isNotEmpty()) DetailLine(R.string.info_location, file.path.substringBeforeLast('/'))
-                DetailLine(R.string.info_size, formatSize(file.sizeBytes))
+                DetailLine(R.string.info_size, ltr(formatSize(file.sizeBytes)))
                 if (file.durationMs > 0) DetailLine(R.string.info_duration, formatDuration(file.durationMs))
-                if (file.width > 0 && file.height > 0) DetailLine(R.string.info_resolution, "${file.width} × ${file.height}")
+                if (file.width > 0 && file.height > 0) DetailLine(R.string.info_resolution, ltr("${file.width} × ${file.height}"))
                 if (file.dateAddedSec > 0) {
                     DetailLine(
                         R.string.info_date,

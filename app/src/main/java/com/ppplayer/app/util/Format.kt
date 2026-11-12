@@ -63,3 +63,6 @@ fun resumablePosition(positionMs: Long, durationMs: Long): Long {
     if (durationMs > 0 && positionMs > durationMs - 5_000) return 0
     return positionMs
 }
+
+/** Wraps Latin text such as "23.6 MB" or "HW+" so it keeps its order inside right-to-left sentences. */
+fun ltr(text: String): String = "\u2066$text\u2069"

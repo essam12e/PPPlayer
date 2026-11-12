@@ -86,6 +86,7 @@ import com.ppplayer.app.data.Settings
 import com.ppplayer.app.ui.theme.TABULAR
 import com.ppplayer.app.util.formatDuration
 import com.ppplayer.app.util.formatSpeed
+import com.ppplayer.app.util.ltr
 import java.util.Locale
 import kotlin.math.roundToInt
 
@@ -503,7 +504,7 @@ private fun InfoPanel(player: ExoPlayer, state: PlayerUiState) {
     InfoRow(stringResource(R.string.info_location), state.mediaId)
     if (state.durationMs > 0) InfoRow(stringResource(R.string.info_duration), formatDuration(state.durationMs))
     if (video != null) {
-        if (video.width > 0) InfoRow(stringResource(R.string.info_resolution), "${video.width} × ${video.height}")
+        if (video.width > 0) InfoRow(stringResource(R.string.info_resolution), ltr("${video.width} × ${video.height}"))
         codecName(video)?.let { InfoRow(stringResource(R.string.info_video_codec), it) }
         if (video.frameRate > 0) {
             InfoRow(stringResource(R.string.info_frame_rate), String.format(Locale.US, "%.2f fps", video.frameRate))

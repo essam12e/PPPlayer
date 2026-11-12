@@ -126,9 +126,9 @@
     <string name="ab_set_b">يتكرر المقطع A–B</string>
     <string name="ab_cleared">تم إيقاف تكرار A–B</string>
     <string name="player_decoder">وضع فك الترميز</string>
-    <string name="decoder_hw">HW — عتاد الجهاز</string>
-    <string name="decoder_hw_plus">HW+ — العتاد مع بديل برمجي</string>
-    <string name="decoder_sw">SW — الصوت البرمجي أولًا</string>
+    <string name="decoder_hw">\u2066HW\u2069 — عتاد الجهاز</string>
+    <string name="decoder_hw_plus">\u2066HW+\u2069 — العتاد مع بديل برمجي</string>
+    <string name="decoder_sw">\u2066SW\u2069 — الصوت البرمجي أولًا</string>
     <string name="player_background_play">التشغيل في الخلفية</string>
     <string name="player_info">التفاصيل</string>
     <string name="player_queue">قائمة التشغيل</string>
